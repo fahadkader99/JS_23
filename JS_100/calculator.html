@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    Calculator
+</head>
+
+<body>
+
+<br>
+
+<input id="val1"/>
+<input id="val2"/>
+
+<br>
+<br>
+
+<button id="addBtn">Add</button>
+<button id = "subtract">Subtract</button>
+<button id = "multiply">Multiply</button>
+<button id = "mod">Mod</button>
+<p id="Result"></p>
+
+</body>
+
+<script>
+document.getElementById("addBtn").onclick = add2Num;                // onclick the related function will be invoked 
+document.getElementById("subtract").onclick = sub2Num;
+document.getElementById("multiply").onclick = mul2Num;
+document .getElementById("mod").onclick = mod2Num;
+
+
+
+function add2Num(){
+    let a = document.getElementById("val1").value;          // capture the value from 2 text box
+    let b = document.getElementById("val2").value;
+    let result = parseInt(a) + parseInt(b);                 // we need to parseInt since dom will get the result as a text not int
+
+    document.getElementById("Result").innerHTML = result;   // putting the result & sending it back to the dom element;
+}
+
+function sub2Num(){
+    let a = document.getElementById("val1").value;
+    let b = document.getElementById("val2").value;
+    let sub = parseInt(a) - parseInt(b);
+
+    document.getElementById("Result").innerHTML = sub;
+}
+
+function mul2Num(){
+    let a = document.getElementById("val1").value;
+    let b = document.getElementById("val2").value;
+    let multiply = parseInt(a) * parseInt(b);
+
+    document.getElementById("Result").innerHTML = multiply;
+}
+
+function mod2Num(){
+    let a = document.getElementById("val1").value;
+    let b = document.getElementById("val2").value;
+    let mod = parseInt(a) % parseInt(b);
+
+    document.getElementById("Result").innerHTML = mod;
+}
+
+
+
+
+</script>
+
+</html>
