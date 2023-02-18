@@ -1,0 +1,76 @@
+<html>
+<head>
+    Calculator 2
+</head>
+<body>
+<br>
+
+<input id="1"/>
+<input id="2"/>
+
+<br>
+<br>
+
+<button id="add">Add</button>
+<button id="subtract">Subtract</button>
+<button id="multiply">Multiply</button>
+<button id="mod">Mod</button>
+<br>
+<p id="result"></p>
+
+</body>
+
+<script type = text/javascript>
+document.getElementById("add").onclick = addNum;
+document.getElementById("subtract").onclick = subNum;
+document.getElementById("multiply").onclick = multiplyNum;
+document.getElementById("mod").onclick = modNum;
+
+
+
+function addNum() {
+    var a = document.getElementById("1").value;
+    var b = document.getElementById("2").value;
+    let result = parseInt(a) + parseInt(b);
+
+    document.getElementById("result").innerHTML = result;
+
+}
+
+function subNum(){
+    var a = document.getElementById("1").value;
+    var b = document.getElementById("2").value;
+    let result = parseInt(a) - parseInt(b);
+    document.getElementById("result").innerHTML = result;
+}
+
+function multiplyNum(){
+    var a = document.getElementById("1").value;
+    var b = document.getElementById("2").value;
+    var result = parseInt(a) * parseInt(b);
+    document.getElementById("result").innerHTML = result;
+}
+
+function modNum(){
+    var a = document.getElementById("1").value;
+    var b = document.getElementById("2").value;
+    let result = parseInt(a) % parseInt(b);
+    document.getElementById("result").innerHTML = result;
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>
