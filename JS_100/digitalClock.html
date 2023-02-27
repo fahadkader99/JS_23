@@ -2,8 +2,80 @@
 <head> Digital Clock</head>
 <body>
 
-    <h1 id="ny"> </h1>
+    <h1 id="time"> </h1>
+    <h2 id = "date"> </h2>
 
 </body>
+
+
+
+<script type="text/javascript">
+
+    function showTime(){
+        let date = new Date();
+        let hours = date.getHours();
+        let min = date.getMinutes();
+        let sec = date.getSeconds();
+        let session = "AM";
+
+        // lets make the clock more dynamic     -- 12hr format
+        if(hours == 0){
+            hours = 12;
+        }
+        else if(hours > 12){
+            hours = hours - 12;
+            session = "PM";
+        }
+
+        // make the time prefix starts with 0 for h:m:s
+        if(hours < 10){
+            hours = "0" + hours;
+        }
+        else if(min < 10){
+            min = "0" + min;
+        }
+        else if(sec < 10){
+            sec = "0" + sec;
+         }
+
+        // In ternary operator
+        /*
+        hours = (hours < 10) ? "0" + hours : hours;
+        min = (min < 10) ? "0" + min : min;
+        sec = (sec < 10) ? "0" + sec : sec;
+        */
+
+        let time = hours +" : "+ min +" : "+ sec +" "+ session;
+        
+        document.getElementById("time").innerHTML=time; 
+        setTimeout(showTime, 1000);     // this method is calling the showTime function in  every 1 sec.
+
+    }
+
+
+    function showDate(){
+        
+        let d = new Date();
+        let day = d.getDate();
+        let month = d.getMonth() + 1;
+        let year = d.getFullYear();
+
+        // Update the prefix to show 2 digits for day & months
+        if(day < 10){
+            day = "0" + day;
+        }
+        else if(month < 10){
+            month = "0" + month;
+        }
+
+        let date = day +" - "+ month +" - "+ year;
+        document.getElementById("date").innerHTML = date; 
+    }
+
+    // Calling the functions
+    showTime();
+    showDate();
+    
+</script>
 
 </html>
