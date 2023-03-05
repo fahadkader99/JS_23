@@ -49,7 +49,81 @@ console.log(f.replaceAll("Fahad", "Kader"));
 console.log();
 
 
-// 
+
+
+
+/*
+
+Number - methods
+
+*/
+
+// number can be assigned in 2 way
+let g = 100;
+let h = new Number(200);
+
+
+// Int or exponentianl
+let i = 102.75;
+let j = 10e2;
+console.log(i + " " + j);
+
+
+// isInteger();
+console.log(Number.isFinite(f));            // string > so will return false;
+console.log(Number.isInteger(j));           // int > will return true;
+console.log();
+
+let k = 2 + " A ";                          // both will return false > since they have sting in it. Just like java if there is any sting the data type will be considered as String
+let l = "A " + 2;
+console.log(Number.isInteger(k));
+console.log(Number.isInteger(l));
+console.log();
+
+
+
+// parseInt() - convert sting into number
+let m = "222";
+console.log(typeof (m));
+
+let n = Number.parseInt(m);                 // converting into Number from Sting & saving into variable
+console.log(typeof (n));
+console.log();
+
+
+
+// parseFloat();
+let o = "11.223";
+console.log(typeof (Number.parseFloat(o)));
+console.log();
+
+
+// toString() - converts number to String
+console.log(typeof (Number.toString(g)));
+console.log();
+
+
+// valueOF();       Number + String
+let p = 500;
+console.log(p.valueOf());
+console.log();
+
+// let q = "Fahad";
+// console.log(q.valueOf());
+
+
+// toExponential() - converts a number into String & returns in exponential format
+p = 10;
+console.log(p.toExponential(2));
+console.log();
+
+
+// toFixed() - round up a number to nearest hight or lowest fixed point
+let r = 2.22;
+console.log(r.toFixed());
+
+
+
 
 
 
