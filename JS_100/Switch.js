@@ -1,5 +1,5 @@
 // Switch case  --- Find days in  a week
-var day = 70;
+var day = 3;
 
 switch (day) {
     case 1: console.log("Monday"); break;
